@@ -1,0 +1,33 @@
+行 头 row first-screen  
+    行 导航 row nav global
+        列 左 col left
+        列 右 col right
+行 体 row main
+    行  row
+        列 连接组 col link-group
+        列 搜索 col search
+    行 内容 row content
+        列 推荐内容 col recommended content
+            列 精选讨论 Featured Discussion
+                行 推荐文章*n row recommended text
+                    列 喜欢 col like
+                    列 文章内容 col text content
+                        行 文章标题 row title
+                        行 文章预览 row preview
+                        行 文章所属 row ascription
+
+            列  推荐小组 row recommended group
+                行 标题 row title
+                行 内容*n row content
+                    行 小组信息 row group info
+                        列 图片 
+                        列 文字 col text
+                            行 小组名字 row group name
+                            行 小组人数 row group size
+                        列 加入连接 col join link
+    行 翻页连接 row page link
+                
+行 脚 row footer
+    行 row
+        列 元信息 col meta
+        列 连接 col link
