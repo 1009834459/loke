@@ -1,0 +1,166 @@
+item 项目
+title 标题
+count 计数
+nov 导航
+page 页
+link 连接
+group 组
+tag 标签
+row 行
+col 列
+img 图片
+href
+h1
+h2
+div
+place holder
+global全局
+others其他
+preview预览
+timeline 时间线
+search搜索
+动态
+aside
+left
+right
+
+结构类元素
+<html>
+<head>
+    <title>豆瓣结构</title>
+</head>
+<body>
+<nav class="行 导航 页面 row nov page">
+ <main class="行 时间线 row time-line">
+ <section class="行 动态 row ">
+<aside class="行 推荐组">
+<footer class = "行 页脚">
+
+功能类元素
+<a> ── 链接,target属性指定点击后的跳转方式
+<a href="https://biaoyansu.com" target="_self(默认),_blank">表严肃</a>
+
+<h1> … <h6> ── 标题
+
+<img>── 图片 <img>用于定义网页中的图片。
+<img src="https://public.biaoyansu.com/mao.jpg">
+src 用于指定图片存放在哪里（图片地址
+alt 用于图片加载失败（图挂了）时显示的文字。
+width和height 指定图片宽高，通常不推荐使用这组属性，建议使用CSS来完成。
+border 边框，通常不推荐使用此属性，建议使用CSS来完成。
+
+<p> ── 段落
+<p>我是个段落</p>
+
+<input> ── 单行输入
+
+type属性
+<input type="text">
+
+password 用于输入密码
+<input type="password">
+
+color 通过调用浏览器的色盘选择颜色
+
+date 用于选择日期
+<input type="date">
+
+number 用于输入数字
+<input type="number">
+
+checkbox 多选框，
+想吃点啥？<br> <!-- <br>用于断行 -->
+<input type="checkbox" name="meal"> 大盘鸡<br> <!-- meal: 饭食 -->
+<input type="checkbox" name="meal"> 麻麻鱼<br>
+<input type="checkbox" name="meal"> 水煮肉片
+name="meal"说明所有的选框都是针对meal
+
+使用checked属性可以使选框默认选中
+<input type="checkbox" checked> 我同意服务协议
+
+radio 单选，限定了选择范围的同时只能选中一项
+请选择你的性别<br>
+<input type="radio" name="gender"> 男<br> <!-- gender: 性别 -->
+<input type="radio" name="gender"> 女
+同checkbox一样，radio也可以使用checked属性可以使选框默认选中
+请选择你的性别<br>
+<input type="radio" name="gender"> 男<br> <!-- gender: 性别 -->
+<input type="radio" name="gender" checked> 女
+
+placeholder 当输入框为空时内内部可以显示一些指引内容让用户知道应该如何输入
+昵称：<input placeholder="王花花">
+ value 默认输入
+昵称：<input placeholder="王花花" value="赵可爽">
+autofocus 有时候一张页面打开后我们希望能直接"将光标放到主输入框中"
+
+<textarea> ── 多行文字输入框
+<textarea placeholder="写下今天的新鲜事..."></textarea>
+
+<textarea>的默认值是设置在内容区的
+<textarea>Yo</textarea>
+
+<button> ── 按钮
+<button>元素一般会配合其他元素或JavaScript使用，单独存在没有意义，因为<button>本身没有功能。
+
+<form> ── 表单
+<form>
+ <input placeholder="用户名"><br>
+ <input placeholder="密码" type="password"><br>
+ <button type="submit">登录</button>
+ <button type="reset">重置</button>
+</form>
+
+<span> ── 包含行内文字
+<span>和<div>非常相似.<span>"软"，宽度由内容多少决定。
+<!--
+此处的style属性用于添加样式，突出他们的特征，
+我们会在CSS章节中详细说明
+-->
+<div style="border: 2px solid black;">Yo</div>
+<span style="border: 2px solid black;">Yo</span>
+
+表格类元素
+使用<table>元素可以既清楚又高效的显示数据
+    <table border="1"> <!-- border属性已弃用，此处仅做演示 -->
+        <caption>表站花名册</caption>
+        <thead>
+          <th>姓名</th>
+          <th>年龄</th>
+        </thead>
+        <tbody>
+          <tr>
+           <td>王花花</td>
+           <td>18</td>
+          </tr>
+          <tr>
+           <td>李拴蛋</td>
+           <td>19</td>
+          </tr>
+          <tr>
+           <td>赵可爽</td>
+           <td>20</td>
+          </tr>
+        </tbody>
+      </table>
+      <table> ── 表格
+        <table>
+            内容...
+        </table>
+
+<thead> ── 表头（table head）
+<th> ── 表头项（table head cell 表头单元格）
+<tbody> ── 表体（table body 表格主体）
+<tr> ── 行（table row）
+ 定义表格行，每一行都是一个<tr>。
+定义表格单元格，每个单元格都是一个<td>。
+
+ <caption> ── 表格标题
+    <table>
+        <caption>表教室花名单</caption> <!-- 表格标题 -->
+        <thead>
+          ...
+        </thead>
+        <tbody>
+          ...
+        </tbody>
+      </table>
