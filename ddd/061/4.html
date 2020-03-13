@@ -1,0 +1,41 @@
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row:before,
+        .row:after {
+            content: "";
+            display: block;
+            clear: both;
+            border:rgb(12, 8, 8) solid;
+
+            
+        }
+        .p50{
+            border:red solid;
+            float: left;
+            width:50%
+            
+        }
+        .p25{
+            float: left;
+            width:25%;
+             border:red solid; 
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="p50">50</div>
+        <div class="p50">50</div>
+        <div class="p50">50</div><div class="p50">50</div><div class="p50">50</div>
+        <div class="p25">25</div>
+        <div class="p25">25</div>
+    </div>
+    <!-- .row(>.col{$}*2)*2 -->
+
+</body>

@@ -1,0 +1,17 @@
+<script>
+    function aa(){
+        let a1=1;
+    };
+    function bb(){
+        aa()
+        
+        return function(){
+            return.a1;
+        }
+        
+
+    };
+    bb()
+    console.log(aa.a1)
+    let b1=bb()
+</script>

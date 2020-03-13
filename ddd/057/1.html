@@ -1,0 +1,75 @@
+<script>
+    let arr=[
+        1,2,666
+    ];
+    console.log(arr[2])
+
+    let arr1 = [
+        1,
+        2,
+        [666],
+    ];
+    console.log(arr1[2][0])
+
+    let arr2 = [  [  [1,5],  ["whh",666], ],  ];
+    console.log(arr2[0][1][1])
+
+    let arr3 = [  [  [100,"Emmm"],[  2,'yo',[666],  ],  ], ];
+    console.log(arr3[0][1][2][0])
+
+    let arr4 = {
+        a:1,
+        b:{
+            yo:{
+                em:"6",
+                ha:666,
+            },
+        },
+    };
+    console.log(arr4.b.yo.ha)
+    let obj = {
+        a:1,
+        b:{
+            yo:[
+                2,'La',{
+                    muhaha:'~',
+                    a:666,
+                }
+            ],
+
+            
+        },
+    };
+    console.log(obj.b.yo[2].a)
+    let obj1 = {
+        a:1,
+        b:{
+            x:[
+                2,{ya:[666]},
+            ],
+        },
+    };
+    console.log(obj1.b.x[1].ya[0])
+    let obj2 = {
+        a:[3,5],
+        b:["yo",1],
+    };
+    console.log(obj2.a.length)
+    console.log(obj2.b.length)
+    let obj3 = {
+        a:{
+            foo:2
+        },
+        yo:[3,5],
+        b:{
+            la:{
+                name:"wood",
+                x:[5,'a','c'],
+                muhaha:['Bob','Huahua'],
+                leng:100,
+            },
+        },
+    };
+    console.log(typeof(obj3.a))
+
+</script>

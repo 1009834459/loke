@@ -1,0 +1,12 @@
+@import url(./style1.css);
+@import url(./style2.css);
+p1{
+    font-size:300%;
+    color:rgb(45, 212, 212);
+    opacity:80%;
+    background:rgb(34, 25, 25);
+    border:solid;
+}
+span{
+    color:green;
+}

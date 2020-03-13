@@ -1,0 +1,42 @@
+
+<style>
+    a:hover { /* 当鼠标悬停在<a>上时，再作用以下样式 */
+      border: 2px solid #000;
+    }
+  </style>
+  
+  <a href="#">Yo</a>
+
+  <style>
+    /* 鼠标按下作用样式，松开后还原样式 */
+    button:active { border: 2px solid #000; }
+  </style>
+  
+  <button href="#">Yo</button>
+
+  <style>
+    /* 当鼠标点击输入框或用Tab切换到输入框时作用样式 */
+     input:focus { border: 2px solid #000; }
+    </style>
+    
+    <input>
+
+    <style>
+        [type="checkbox"]:checked { outline: 2px solid #000; }
+      </style>
+      
+      <input type="checkbox" checked>
+
+      <style>
+        input:disabled { outline: 2px solid #000; }
+      </style>
+      
+      <input>
+      <input disabled>
+      <style>
+        input:enabled { outline: 2px solid #000; }
+      </style>
+      
+      <input>
+      <input disabled>
+      

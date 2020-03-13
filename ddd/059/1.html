@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .border {
+            background: #000;
+            display: inline-block;
+            color: red;
+            padding: 10px;
+            border: 5px solid rgba(0, 0, 0, 1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="border">
+        <p>
+            <span class="text">
+                修脚 贴膜
+            </span>
+            <!-- <span class="text2">
+                aaaa
+            </span> -->
+        </p>
+    </div>
+    <script>
+        let a = document.querySelector(".border");
+        let text = a.querySelector("p");
+        // let text2 = a.querySelector(".text2");
+        let text2 = a.querySelector(".text");
+        text.style.opacity = 0;
+
+        let count = 1;
+        let countTest = 1;
+        let size = 1;
+        let pedicure = 0;
+        let text3;
+
+        setInterval(function () {
+
+            // "0" "1"
+            // true false
+            let elementStyle = getComputedStyle(text).opacity == 1;
+
+
+
+
+            // console.log(elementStyle);
+            if (elementStyle) {
+                text.style.opacity = 0;
+                a.style.borderColor = "black";
+            }
+            else {
+                text.style.opacity = 1;
+                a.style.borderColor = "red";
+                pedicure++
+                switch (pedicure) {
+                    case 1:
+                        text3 = '修脚';
+                        break;
+                    case 2:
+                        text3 = '贴膜';
+                        break;
+                    case 3:
+                        text3 = 'wer'
+                        break;
+                    case 4:
+                        text3 = '333wer'
+                        break;
+                    case 5:
+                        text3 = '4444wer'
+                        break;
+                    default:
+                        pedicure = 0;
+
+
+
+
+
+
+                }
+
+                text2.innerText = text3;
+
+
+                // pedicure ? text3 = '修脚' : text3 = '贴膜';
+                // text2.innerText = text3;
+
+                // pedicure = !pedicure;
+
+                /*
+                    elementStyle == 1 ?
+                    text.style.opacity = 0 :
+                    text.style.opacity = 1;
+                */
+                // if (elementStyle) {
+                //     text.style.opacity = 0;
+                //     a.style.borderColor = "black";
+                // }
+                // else {
+                //     text.style.opacity = 1;
+                //     // count++;      
+                //     // text2.innerText = count + "人使用过";
+                //     a.style.borderColor = "red";
+                //     pedicure ? text3 = '修脚' : text3 = '贴膜';
+                //     text2.innerText = text3;
+
+                //     pedicure = !pedicure;
+
+
+
+
+
+            }
+
+            //闪+放大三次.
+            // if (elementStyle) {
+            //     text.style.opacity = 0;
+            //     a.style.borderColor = "black";
+            // }
+            // else {
+            //     text.style.opacity = 1;
+            //     count++;
+            //     text2.innerText = count + "人使用过";
+            //     a.style.borderColor = "red";
+            //     size < 3 ? size++ : size = 1;
+            //     a.style.fontSize = 2 * size + "rem"
+            //     console.log("rem")
+
+
+            // }
+
+            /*
+ 
+             text.style.opacity = elementStyle ? 0 : 1;
+            !elementStyle && (count++ , text2.innerText = count + "人使用过");
+            */
+        }, 500)
+
+    </script>
+</body>
+
+</html>

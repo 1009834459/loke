@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .border {
+            background: black;
+            border: 2px solid rgb(253, 0, 0);
+            display: inline-block;
+
+        }
+
+        .text {
+            color: red;
+        }
+
+        .text2 {
+            color: red;
+            font-size: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="border">
+        <span class="text">
+            修脚贴膜
+        </span>
+        <span class="text2">
+
+        </span>
+
+    </div>
+    <script>
+        const border = document.querySelector(".border");
+        const text = border.querySelector(".text");
+        const text2 = border.querySelector(".text2");
+        let countnum = 1;
+        let shiftTextCount = 1;
+        let i1 = 0;
+
+
+        //转换透明度
+        function shiftOpacity(obj) {
+            let elementStyle = obj.style.opacity;
+            if (elementStyle == 1) {
+                obj.style.opacity = 0;
+            }
+            else {
+                obj.style.opacity = 1;
+            }
+        };
+
+        //在广告牌后面添加计数器
+        function setCount(obj) {
+            let elementStyle = obj.style.opacity;
+            if (elementStyle == 1) {
+                obj.style.opacity = 0;
+            }
+            else {
+                countnum++;
+                obj.style.opacity = 1;
+                obj.innerText = countnum + "人用过";
+            }
+
+        }
+
+        //越闪越大，最大3级，然后重头循环
+        function setScale(obj) {
+            let elementStyle = obj.style.opacity;
+
+            if (elementStyle == 1) {
+                obj.style.opacity = 0;
+            }
+            else {
+
+                obj.style.opacity = 1;
+                obj.style.fontSize = countnum * 2 + "rem";
+                countnum == 3 ? countnum = 1 : countnum++;
+            }
+
+
+        }
+
+        //“修脚”和“贴膜”交替显示
+        function shiftText(obj) {
+            let elementStyle = obj.style.opacity;
+            if (elementStyle == 1) {
+                obj.style.opacity = 0;
+                shiftTextCount++
+            }
+            else {
+                obj.style.opacity = 1;
+                if (shiftTextCount == 2) {
+                    obj.innerText = "修脚";
+                }
+
+                else if (shiftTextCount == 4) {
+                    obj.innerText = "贴膜";
+                    shiftTextCount = 1;
+                }
+
+            }
+        };
+
+        //可动态指定显示多少服务
+        function loopShift(obj, x) {
+            let elementStyle = obj.style.opacity;
+            if (elementStyle == 1) {
+                obj.style.opacity = 0;
+                shiftTextCount++
+            }
+            else {
+                obj.style.opacity = 1;
+               
+                i1++;
+                switch (i1) {
+                    case 1:
+                        obj.innerText = "111";
+                        break;
+                    case 2:
+                        obj.innerText = "2222221";
+                        break;
+                    case 3:
+                        obj.innerText = "333333111";
+                        break;
+                    case 4:
+                        obj.innerText = "4444441";
+                        break;
+                    case 5:
+                        obj.innerText = "55555";
+                        break;
+                    default:
+                        i1= 0;
+                        
+
+
+                }
+
+            }
+        }
+
+        
+
+
+        setInterval(function () {
+            //shiftOpacity(text)
+            //setCount(text2)
+            //setScale(border)
+            //shiftText(text)
+            loopShift(text, 5)
+        }, 500);
+    </script>
+</body>
+
+</html>
